@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Moedas</title>
+    <script src="" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>CONVERSOR DE MOEDAS</h1>
+    
+    <div id="container">
+
+        <p>Insira o Valor para Conversão:</p>
+        <input type="number" id="valor">
+
+        <div id="selects">
+        <p>Converter de:</p>
+        <select id="moedaInicial">
+            <option value="">🇧🇷 Real</option>
+            <option value="">🇺🇸 Dolar</option>
+            <option value="">🇬🇧 Euro</option>
+        </select>
+
+        <p>Para:</p>
+        <select id="moedaFinal">
+            <option value="">🇧🇷 Real</option>
+            <option value="">🇺🇸 Dolar</option>
+            <option value="">🇬🇧 Euro</option>
+        </select>
+        </div>
+
+        <input type="button" value="Converter" id="btnConvert">
+        <textarea id="valorConvert" readonly></textarea>
+
+    </div>
+
+</body>
+</html>
