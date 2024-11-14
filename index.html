@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Conversor de Moedas</title>
-    <script src="" defer></script>
     <link rel="stylesheet" href="style.css">
+    <script src="validFront.js" defer></script>
 </head>
 <body>
 
@@ -12,27 +12,25 @@
     
     <div id="container">
 
-        <p>Insira o Valor para Conversão:</p>
-        <input type="number" id="valor">
+        <input type="number" id="valor" placeholder="Insira um Valor para Conversão">
 
         <div id="selects">
-        <p>Converter de:</p>
-        <select id="moedaInicial">
-            <option value="">🇧🇷 Real</option>
-            <option value="">🇺🇸 Dolar</option>
-            <option value="">🇬🇧 Euro</option>
+        <label for="moedaInicial" class="formLabel"><b>Converter de:</b></label>
+        <select id="moedaInicial" onchange="removeOpcao()">
+            <option value="real" class="opcaoInicial">🇧🇷 Real</option>
+            <option value="dolar" class="opcaoInicial">🇺🇸 Dolar</option>
+            <option value="euro" class="opcaoInicial">🇬🇧 Euro</option>
         </select>
 
-        <p>Para:</p>
-        <select id="moedaFinal">
-            <option value="">🇧🇷 Real</option>
-            <option value="">🇺🇸 Dolar</option>
-            <option value="">🇬🇧 Euro</option>
+        <label for="moedaFinal" class="formLabel"><b>Para:</b></label>
+        <select id="moedaFinal" onchange="removeOpcao()">
+            <option value="real" class="opcaoFinal">🇧🇷 Real</option>
+            <option value="dolar" class="opcaoFinal">🇺🇸 Dolar</option>
+            <option value="euro" class="opcaoFinal">🇬🇧 Euro</option>
         </select>
         </div>
 
-        <input type="button" value="Converter" id="btnConvert">
-        <textarea id="valorConvert" readonly></textarea>
+        <input type="button" value="Converter" id="btnConvert" onclick="validaDados()">
 
     </div>
 
